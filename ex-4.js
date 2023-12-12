@@ -374,4 +374,20 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+let membersName = bills.map((nameMember)=>{
+  if (nameMember.member !== null){
+  return nameMember.member.name
+};  
+});
+// console.log(membersName)
+
+const totalMembers =[];
+const members = membersName.map((memberCount)=>{
+  if (!totalMembers.includes(memberCount) && memberCount !== undefined){
+  totalMembers.push(memberCount);
+  }
+  return ;
+});
+
+console.log(totalMembers)
+console.log(totalMembers.length)

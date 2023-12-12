@@ -374,4 +374,19 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+const members = bills.map((findMember) =>{
+   if(findMember.member !== null){
+    return findMember.member.name;
+   }; 
+});
+console.log(members)
+
+const newMembers = members.filter((findNameValue) =>{
+  return findNameValue !== undefined;
+});
+console.log(newMembers)
+
+// const billMembers = newMembers.reduce((accumulatorName,currentName)=>{
+//   return accumulatorName+currentName;
+// })
+// console.log(billMembers)

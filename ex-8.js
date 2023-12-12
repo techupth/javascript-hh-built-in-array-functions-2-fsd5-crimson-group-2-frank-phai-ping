@@ -375,4 +375,19 @@ const bills = [
 
 // Start coding here
 
-const totalPaidByLocation;
+// ยังผิดอยู่ห้ามลอกก
+const totalPaidByLocation = (bills) =>{
+return bills.reduce((accumulator,current) => {
+    let result = current.total;
+    let location = current.location;  // ยังผิดอยู่ห้ามลอกก
+    
+     if (location !== accumulator.location){
+        return location = current.location + accumulator.location;   // ยังผิดอยู่ห้ามลอกก
+     } else {
+        return result = current.total + accumulator.total;  // ยังผิดอยู่ห้ามลอกก
+     }
+     
+},{});
+};
+console.log(totalPaidByLocation)
+// ยังผิดอยู่ห้ามลอกก

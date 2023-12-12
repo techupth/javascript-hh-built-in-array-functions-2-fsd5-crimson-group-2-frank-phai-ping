@@ -374,3 +374,18 @@ const bills = [
 ];
 
 // Start coding here
+
+//สร้าง Array ข้อมูลยอดชำระ
+let paymentValues = bills.map((value) =>{
+  return value.total;
+})
+
+console.log(paymentValues)
+
+//คำนวณจำนวนเงิน
+let calculateTotalAmount = (totalValue,currentValue) =>{
+  return totalValue+currentValue;
+}
+
+let totalAmount = paymentValues.reduce(calculateTotalAmount)
+console.log(`Total bill transaction is ${totalAmount.toLocaleString()}`)
